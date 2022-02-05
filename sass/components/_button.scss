@@ -1,0 +1,25 @@
+.button {
+  @include font-design(inherit, normal, 700, 16px, 1.86, 0.06em);
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  color: var(--btn-text-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  transition-property: background-color;
+  transition-duration: var(--transition-during);
+  transition-timing-function: var(--transition-cub);
+}
+//  ===============    DESKTOP   1200    ===========
+@media screen and (min-width: 1200px) {
+  .button {
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #188ce8;
+    }
+  }
+}

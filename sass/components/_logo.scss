@@ -1,0 +1,11 @@
+.logo {
+  @include font-design(Raleway, normal, 700, 24px, 1.19);
+  color: var(--main-color);
+}
+
+//  ===============    DESKTOP   1200    ===========
+@media screen and (min-width: 1200px) {
+  .logo {
+    @include font-design(Raleway, normal, 700, 26px, 1.19);
+  }
+}

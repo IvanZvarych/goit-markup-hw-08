@@ -1,0 +1,230 @@
+.sandwich {
+  display: none;
+  padding: 40px calc(50vw - 200px);
+  position: fixed;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--modal-bg-color);
+  // transform: rotateX(90deg);
+  // transition-property: transform, opacity, visibility;
+  // transition-duration: var(--transition-during);
+  // transition-timing-function: var(--transition-cub);
+
+  &.is-open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    // transform: rotateX(0deg);
+    // transition-property: transform, opacity;
+    // transition-duration: var(--transition-during);
+    // transition-timing-function: var(--transition-cub);
+  }
+}
+
+.nav__list {
+  & > :not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.nav__link {
+  @include font-design(Roboto, normal, 500, 40px, 1.17, 0.02em);
+  color: var(--main-color);
+}
+.btn-close-menu {
+  display: block;
+  position: fixed;
+  top: 10px;
+  right: initial;
+  left: calc(50vw + 185px);
+  border: none;
+  padding: 0;
+  z-index: 101;
+  background-color: transparent;
+
+  &:hover .svg-icon-menu,
+  &:focus .svg-icon-menu,
+  &:active .svg-icon-menu {
+    fill: var(--accent-color);
+  }
+}
+.header-contakt {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: auto;
+}
+.nav__tel {
+  @include font-design(Roboto, normal, 500, 34px, 1.17, 0.02em);
+  color: var(--accent-color);
+}
+.nav__email {
+  @include font-design(Roboto, normal, 500, 24px, 1.17, 0.02em);
+  color: var(--main-color2);
+  margin-top: 32px;
+}
+.icon-envelope,
+.icon-smartphone {
+  display: none;
+}
+.sandwich-social-list {
+  display: flex;
+  justify-content: center;
+}
+.sandwich__social-link {
+  display: flex;
+  align-content: center;
+  margin-top: 64px;
+
+  & > :nth-child(n + 1) {
+    @include font-design(Roboto, normal, 500, 18px, 1.12, 0.02em);
+    color: var(--accent-color);
+  }
+
+  &:not(:last-child)::after {
+    content: '';
+    height: 22px;
+    width: 0;
+    border-left: 1px solid rgba(33, 33, 33, 0.2);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+//   ====================   MOBILE  < 480   ==========
+
+@media screen and (max-width: 480px) {
+  .sandwich {
+    padding: 40px 48px;
+  }
+  .btn-close-menu {
+    left: initial;
+    right: 15px;
+  }
+}
+
+//   ====================   TABLET  768   ==========
+
+@media screen and (min-width: 768px) {
+  .sandwich {
+    position: initial;
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: initial;
+    height: initial;
+    padding: initial;
+    margin-left: 88px;
+    flex-grow: 1;
+    // transform: rotateX(0deg);
+  }
+  .btn-close-menu {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    align-items: center;
+    & > :not(:last-child) {
+      margin-bottom: initial;
+      margin-right: 50px;
+    }
+  }
+  .nav__list > :nth-child(n + 1) {
+    position: relative;
+  }
+  .nav__link {
+    @include font-design(Roboto, normal, 500, 14px, 1.14, 0.02em);
+    color: var(--main-color);
+  }
+  .sandwich-social-list {
+    display: none;
+  }
+  .header-contakt {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: -5px;
+    right: 15px;
+  }
+  .nav__email,
+  .nav__tel {
+    @include font-design(Roboto, normal, 500, 12px, 1.16, 0.02em);
+    color: var(--main-color2);
+    margin: initial;
+  }
+  .nav__email {
+    margin-bottom: 10px;
+  }
+  .icon-envelope,
+  .icon-smartphone {
+    vertical-align: middle;
+    display: initial;
+    margin-right: 8px;
+    fill: currentColor;
+  }
+  .current::after {
+    content: '';
+    position: absolute;
+    bottom: -33px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+  }
+}
+
+//  ===============    DESKTOP   1200    ===========
+
+@media screen and (min-width: 1200px) {
+  .sandwich {
+    position: initial;
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: initial;
+    height: initial;
+    padding: initial;
+    margin-left: 93px;
+    flex-grow: 1;
+    // transform: rotateX(0deg);
+  }
+  .header-contakt {
+    position: initial;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+  }
+  .nav__email,
+  .nav__tel {
+    display: block;
+    @include font-design(Roboto, normal, 500, 14px, 1.14, 0.02em);
+  }
+  .nav__email {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .icon-smartphone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+  }
+  .icon-envelope {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+  }
+}
+
+.current {
+  color: var(--accent-color);
+}

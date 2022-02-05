@@ -1,0 +1,73 @@
+.skills__list > :not(:last-child) {
+  margin-bottom: 30px;
+}
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background-color: var(--bg-color);
+  border-radius: 4px;
+}
+.field__icon-skills {
+  width: 70px;
+  height: 70px;
+}
+.skills__header-3 {
+  @include font-design(Roboto, normal, 700, 14px, 1.14);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 30px;
+  color: var(--main-color);
+}
+.skills__text {
+  @include font-design(Roboto, normal, 400, 14px, 1.71);
+  color: var(--main-color2);
+  margin-top: 10px;
+}
+
+//  ===============    TABLET   768    ===========
+
+@media screen and (min-width: 768px) {
+  .skills__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > :nth-child(n + 1) {
+      flex-basis: calc((100% + 30px) / 2 - 30px);
+      margin: 30px 30px 0 0;
+    }
+
+    & > :nth-child(-n + 2) {
+      margin-top: 0;
+    }
+
+    & > :nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  .skills__header-3 {
+    text-align: start;
+  }
+}
+
+//  ===============    DESKTOP   1200    ===========
+@media screen and (min-width: 1200px) {
+  .skills__list {
+    // display: flex;
+    // flex-wrap: wrap;
+
+    & > :nth-child(n + 1) {
+      flex-basis: calc((100% + 30px) / 4 - 30px);
+      margin: 30px 30px 0 0;
+    }
+
+    & > :nth-child(-n + 4) {
+      margin-top: 0;
+    }
+
+    & > :nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}

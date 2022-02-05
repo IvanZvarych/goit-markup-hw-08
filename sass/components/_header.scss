@@ -1,0 +1,53 @@
+.header {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  max-width: 480px;
+}
+.header--line {
+  border-bottom: 1px solid #ececec;
+}
+.w-logo {
+  color: var(--accent-color);
+}
+.svg-icon-menu {
+  fill: var(--main-color);
+}
+.btn-menu-open {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  display: flex;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+//  ===============    TABLET   768    ===========
+@media screen and (min-width: 768px) {
+  .container--header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 768px;
+  }
+  .header {
+    max-width: initial;
+
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  .btn-menu-open {
+    display: none;
+  }
+}
+
+//  ===============    DESKTOP   1200    ===========
+@media screen and (min-width: 1200px) {
+  // .header {
+
+  // }
+  .container--header {
+    width: 1200px;
+  }
+}

@@ -1,0 +1,38 @@
+.set-social-icons {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+  & > :not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.icon-social {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--main-color3);
+
+}
+//  ===============    DESKTOP   1200    ===========
+@media screen and (min-width: 1200px) {}
+.social-link {
+  background-color: var(--icon-bg);
+  transition-property: background-color;
+  transition-duration: var(--transition-during);
+  transition-timing-function: var(--transition-cub);
+
+  &:hover,
+  &:focus {
+    color: var(--icon-color);
+    background-color: var(--accent-color);
+  }
+}

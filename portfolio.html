@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Эффективные решения для вашего бизнеса" />
+    <title lang="en">WebStudio</title>
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header header--line">
+      <div class="container container--header">
+        <a class="link logo" href="" lang="en"><span class="w-logo">Web</span>Studio</a>
+        <button class="btn-menu-open" type="button" data-menu-button-open aria-expanded="false">
+          <svg
+            class="svg-icon-menu"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <use class="icon-menu" href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
+        <div class="sandwich" id="mobile-menu" data-menu>
+          <button class="btn-close-menu" data-menu-button-close>
+            <svg
+              class="svg-icon-menu"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="icon-close-menu" href="./images/icons.svg#close-menu"></use>
+            </svg>
+          </button>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li>
+                <a class="link nav__link" href="./">Студия</a>
+              </li>
+              <li><a class="link nav__link current" href="./portfolio.html">Портфолио</a></li>
+              <li><a class="link nav__link" href="">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="header-contakt">
+            <a class="link nav__email" href="mailto:info@devstudio.com">
+              <svg width="14" height="10" class="icon-envelope">
+                <use href="./images/icons.svg#envelope"></use>
+                </svg>info@devstudio.com
+            </a>
+
+            <a class="link nav__tel" href="tel:+380961111111">
+              <svg width="10" height="14" class="icon-smartphone">
+                <use href="./images/icons.svg#smartphone"></use>
+                </svg>+38 096 111 11 11
+            </a>
+          </div>
+          <ul class="sandwich-social-list">
+            <li class="sandwich__social-link"><a class="link" href="">Instagram</a></li>
+            <li class="sandwich__social-link"><a class="link" href="">Twitter</a></li>
+            <li class="sandwich__social-link"><a class="link" href="">Facebook</a></li>
+            <li class="sandwich__social-link"><a class="link" href="">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <!-- h1 HIDE!! -->
+        <h1 class="visually-hidden">Наше портфолио</h1>
+        <div class="container">
+          <ul class="list btn-container">
+            <li><button class="btn" type="button">Все</button></li>
+            <li><button class="btn" type="button">Веб-сайты</button></li>
+            <li><button class="btn" type="button">Приложения</button></li>
+            <li><button class="btn" type="button">Дизайн</button></li>
+            <li><button class="btn" type="button">Маркетинг</button></li>
+          </ul>
+
+          <ul class="list card-set">
+            <li class="card">
+              <a class="link" href="#">
+                <div class="card__representation">
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio1-t.jpg    354w,
+                      ./images/portfolio1-d.jpg    370w,
+                      ./images/portfolio1.jpg      450w,
+                      ./images/portfolio1-t@2x.jpg 708w,
+                      ./images/portfolio1-d@2x.jpg 740w,
+                      ./images/portfolio1@2x.jpg   900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                    src="./images/portfolio1.jpg"
+                    alt="Отркытый ноутбук"
+                  />
+                  <p class="card__img-overlay">
+                    Технокряк это современная площадка распространения коронавируса. Компании
+                    используют эту платформу для цифрового шпионажа и атак на защищённые сервера
+                    конкурентов.
+                  </p>
+                </div>
+                <div class="card__label">
+                  <h2 class="card__caption">Технокряк</h2>
+                  <p class="card__comment">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="link" href="#">
+                <div class="card__representation">
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio2-t.jpg    354w,
+                      ./images/portfolio2-d.jpg    370w,
+                      ./images/portfolio2.jpg      450w,
+                      ./images/portfolio2-t@2x.jpg 708w,
+                      ./images/portfolio2-d@2x.jpg 740w,
+                      ./images/portfolio2@2x.jpg   900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                    src="./images/portfolio2.jpg"
+                    alt="Два баскетболиста с мячом"
+                  />
+                  <p class="card__img-overlay">
+                    Разработан макро-технологический постер, который позволяет только глядя в него
+                    не менее 3-х часов в день, прокачать свои баскетбольные скиллы не менее чем на
+                    +24 уровня вверх. И так каждый день!
+                  </p>
+                </div>
+                <div class="card__label">
+                  <h2 class="card__caption">Постер New Orlean vs Golden Star</h2>
+                  <p class="card__comment">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="link" href="#">
+                <div class="card__representation">
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio3-t.jpg    354w,
+                      ./images/portfolio3-d.jpg    370w,
+                      ./images/portfolio3.jpg      450w,
+                      ./images/portfolio3-t@2x.jpg 708w,
+                      ./images/portfolio3-d@2x.jpg 740w,
+                      ./images/portfolio3@2x.jpg   900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                    src="./images/portfolio3.jpg"
+                    alt="Логотип ресторана"
+                  />
+                  <p class="card__img-overlay">
+                    Новейшее приложение, в котором использованы последние достижения Репеты дают Вам
+                    возможность он-лайн посещения рыбного ресторана а также полного утоления голода
+                    в цифровом виде.
+                  </p>
+                </div>
+                <div class="card__label">
+                  <h2 class="card__caption">Ресторан Seafood</h2>
+                  <p class="card__comment">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="link" href="#">
+                <div class="card__representation">
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio4-t.jpg    354w,
+                      ./images/portfolio4-d.jpg    370w,
+                      ./images/portfolio4.jpg      450w,
+                      ./images/portfolio4-t@2x.jpg 708w,
+                      ./images/portfolio4-d@2x.jpg 740w,
+                      ./images/portfolio4@2x.jpg   900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                    src="./images/portfolio4.jpg"
+                    alt="Наушники"
+                  />
+                  <p class="card__img-overlay">
+                    Инновационный маркетинговый проект поможет Вам в самых неблагоприятных
+                    обстоятельствах принять решение приобрести даже то, что Вам совсем не нужно ни
+                    за что в жизни.
+                  </p>
+                </div>
+                <div class="card__label">
+                  <h2 class="card__caption">Проект Prime</h2>
+                  <p class="card__comment">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="link" href="#">
+                <div class="card__representation">
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio5-t.jpg    354w,
+                      ./images/portfolio5-d.jpg    370w,
+                      ./images/portfolio5.jpg      450w,
+                      ./images/portfolio5-t@2x.jpg 708w,
+                      ./images/portfolio5-d@2x.jpg 740w,
+                      ./images/portfolio5@2x.jpg   900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                    src="./images/portfolio5.jpg"
+                    alt="Две коробки"
+                  />
+                  <p class="card__img-overlay">
+                    Револиционное приложение разработанное искуственным интеллектом, который не спит
+                    и микросекунды, отображает картины жизни кубических сущностей. Пикассо
+                    переворачивается!
+                  </p>
+                </div>
+                <div class="card__label">
+                  <h2 class="card__caption">Проект Boxes</h2>
+                  <p class="card__comment">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="link" href="#">
+                <div class="card__representation">
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio6-t.jpg    354w,
+                      ./images/portfolio6-d.jpg    370w,
+                      ./images/portfolio6.jpg      450w,
+                      ./images/portfolio6-t@2x.jpg 708w,
+                      ./images/portfolio6-d@2x.jpg 740w,
+                      ./images/portfolio6@2x.jpg   900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                    src="./images/portfolio6.jpg"
+                    alt="Монитор"
+                  />
+                  <p class="card__img-overlay">
+                    Подоблачный сайт разрушающий границы вдохновения. Позволяет Ваше увлечение
+                    превратить во влачение. Вдохновение влачет увлечение. Увлечение вдохновляет
+                    влачение.
+                  </p>
+                </div>
+                <div class="card__label">
+                  <h2 class="card__caption">Inspiration has no Borders</h2>
+                  <p class="card__comment">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="link" href="#">
+                <div class="card__representation">
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio7-t.jpg    354w,
+                      ./images/portfolio7-d.jpg    370w,
+                      ./images/portfolio7.jpg      450w,
+                      ./images/portfolio7-t@2x.jpg 708w,
+                      ./images/portfolio7-d@2x.jpg 740w,
+                      ./images/portfolio7@2x.jpg   900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                    src="./images/portfolio7.jpg"
+                    alt="Открытый журнал"
+                  />
+                  <p class="card__img-overlay">
+                    Лимитированный дизайн предоставляет уникальную возможность поделиться с кем-либо
+                    чем-либо посредством чего-либо в границах существования всего. Либо чего-то.
+                  </p>
+                </div>
+                <div class="card__label">
+                  <h2 class="card__caption">Издание Limited Edition</h2>
+                  <p class="card__comment">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="link" href="#">
+                <div class="card__representation">
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio8-t.jpg    354w,
+                      ./images/portfolio8-d.jpg    370w,
+                      ./images/portfolio8.jpg      450w,
+                      ./images/portfolio8-t@2x.jpg 708w,
+                      ./images/portfolio8-d@2x.jpg 740w,
+                      ./images/portfolio8@2x.jpg   900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                    src="./images/portfolio8.jpg"
+                    alt="Ярлык с надписью"
+                  />
+                  <p class="card__img-overlay">
+                    Единственный в мире маркетинговый лабораториум делает Вас причастным к
+                    возможности продажи всего сущего с несуществующими возможностями по
+                    несущественным способностям.
+                  </p>
+                </div>
+                <div class="card__label">
+                  <h2 class="card__caption">Проект LAB</h2>
+                  <p class="card__comment">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="link" href="#">
+                <div class="card__representation">
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio9-t.jpg    354w,
+                      ./images/portfolio9-d.jpg    370w,
+                      ./images/portfolio9.jpg      450w,
+                      ./images/portfolio9-t@2x.jpg 708w,
+                      ./images/portfolio9-d@2x.jpg 740w,
+                      ./images/portfolio9@2x.jpg   900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                    src="./images/portfolio9.jpg"
+                    alt="Руки на клавиатуре ноутбука"
+                  />
+                  <p class="card__img-overlay">
+                    Приложение. Раскрывает перед Вами возможность взрастить Ваш бизнес за пределы.
+                    Пределы прилагаются, свои тащить нет надобности. Обращаться по уникальному
+                    адресу: поле Чудес. Спросить Лису. Лучше, Кота.
+                  </p>
+                </div>
+                <div class="card__label">
+                  <h2 class="card__caption">Growing Business</h2>
+                  <p class="card__comment">Приложение</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container container--footer">
+        <div class="footer-info">
+          <div class="logo-address">
+            <a class="link logo logo--footer" href="" lang="en"
+              ><span class="w-logo">Web</span>Studio</a
+            >
+            <div class="address">
+              <address class="addr">г. Киев, пр-т Леси Украинки, 26</address>
+              <ul class="">
+                <li class="address__contakt">
+                  <a class="link contakt" href="mailto:info@example.com">info@example.com</a>
+                </li>
+                <li class="address__contakt">
+                  <a class="link contakt" href="tel:+380961111111">+38 096 111 11 11</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="offer">
+            <p class="offer__label">присоединяйтесь</p>
+            <ul class="set-social-icons offer__set-social-icons">
+              <li>
+                <a class="link offer__social-link" href="#">
+                  <svg class="icon-social">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="link offer__social-link" href="#">
+                  <svg class="icon-social">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="link offer__social-link" href="#">
+                  <svg class="icon-social">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="link offer__social-link" href="#">
+                  <svg class="icon-social">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="subscriber" name="subscriber" action="#">
+          <label class="subscriber__label" for="subscriber-mail"> Подпишитесь на рассылку</label>
+          <input
+            class="subscriber__mail"
+            type="email"
+            name="subscriber-mail"
+            id="mail-subscriber"
+            placeholder="E-mail"
+          />
+          <button class="button button__subscriber" type="submit" name="subscriber-button">
+            Подписаться<svg class="button--send" width="24" height="24">
+              <use href="./images/icons.svg#send"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+  </body>
+</html>

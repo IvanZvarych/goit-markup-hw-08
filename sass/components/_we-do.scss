@@ -1,0 +1,45 @@
+.section--we-do {
+  display: none;
+}
+
+//  ===============    DESKTOP   1200    ===========
+@media screen and (min-width: 1200px) {
+  .section--we-do {
+    display: block;
+  }
+
+  .header-2 {
+    @include font-design(Roboto, normal, 700, 36px, 1.16, 0.03em);
+    text-align: center;
+  }
+  .we-do {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    & > :not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .works-board {
+    position: relative;
+
+    & > :nth-child(n + 1) {
+      display: block;
+    }
+  }
+
+  .works-board__label {
+    position: absolute;
+    bottom: 0;
+    padding-top: 27px;
+    @include font-design(Roboto, normal, 700, 14px, 1.14, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--btn-text-color);
+    background-color: rgba(47, 48, 58, 0.8);
+    height: 70px;
+    width: 100%;
+  }
+}

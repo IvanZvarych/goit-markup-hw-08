@@ -1,0 +1,170 @@
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  & > :not(:last-child) {
+    margin-right: 8px;
+  }
+}
+.btn {
+  @include font-design(Roboto, normal, 500, 16px, 1.62, 0.03em);
+  text-align: center;
+  color: var(--btn-text-color2);
+  background-color: var(--btn-background-color);
+  border: transparent;
+  padding: 6px 22px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--transition-during);
+  transition-timing-function: var(--transition-cub);
+
+  &:hover,
+  :active,
+  :focus {
+    color: var(--btn-text-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+//    ==================   GRID   ========================
+.card__label {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+.card__caption {
+  @include font-design(Roboto, normal, 700, 18px, 2, 0.06em);
+  color: var(--main-color);
+  margin-bottom: 4px;
+}
+.card__comment {
+  @include font-design(Roboto, normal, 400, 16px, 1.87, 0.03em);
+  color: var(--main-color2);
+}
+.card-set {
+  display: block;
+  margin-top: 25px;
+}
+.card {
+  max-width: 450px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &:hover .card__img-overlay {
+    transform: translateY(0);
+  }
+}
+
+//  ===============    TABLET   768    ===========
+
+@media screen and (min-width: 768px) {
+  .btn {
+    margin-bottom: 0;
+  }
+  .card-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .card {
+    max-width: initial;
+    display: flex;
+
+    &:nth-child(n) {
+      flex-basis: calc((100% + 30px) / 2 - 30px);
+      margin: 30px 30px 0 0;
+    }
+
+    &:nth-child(-n + 2) {
+      margin-top: 0;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    & > :nth-child(n) {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .card__label {
+    flex-grow: 1;
+  }
+}
+
+//  ===============    DESKTOP   1200    ===========
+
+@media screen and (min-width: 1200px) {
+  .card-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  .card {
+    max-width: initial;
+    display: flex;
+
+    &:nth-child(n) {
+      flex-basis: calc((100% + 30px) / 3 - 30px);
+      margin: 30px 30px 0 0;
+    }
+
+    &:nth-child(-n + 3) {
+      margin-top: 0;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    & > :nth-child(n) {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .card__label {
+    flex-grow: 1;
+  }
+}
+
+.card__representation {
+  position: relative;
+  overflow: hidden;
+}
+.card__img-overlay {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  @include font-design(Roboto, normal, 400, 18px, 1.56, 0.03em);
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 24px 24px;
+  overflow: hidden;
+  overflow-y:auto ;
+  @media screen and (min-width: 768px) {
+    padding: 49px 24px;}
+  @media screen and (min-width: 1200px) {
+    overflow-y: hidden;
+    padding: 63px 24px;
+  }
+  transform: translateY(101%);
+  transition: transform var(--transition-during) var(--transition-cub);
+  @media screen and (min-width: 768px) {
+    padding: 42px 24px;
+  }
+}
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
