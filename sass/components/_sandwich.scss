@@ -11,19 +11,11 @@
   opacity: 0;
   visibility: hidden;
   background-color: var(--modal-bg-color);
-  // transform: rotateX(90deg);
-  // transition-property: transform, opacity, visibility;
-  // transition-duration: var(--transition-during);
-  // transition-timing-function: var(--transition-cub);
 
   &.is-open {
     display: flex;
     opacity: 1;
     visibility: visible;
-    // transform: rotateX(0deg);
-    // transition-property: transform, opacity;
-    // transition-duration: var(--transition-during);
-    // transition-timing-function: var(--transition-cub);
   }
 }
 
@@ -121,7 +113,6 @@
     padding: initial;
     margin-left: 88px;
     flex-grow: 1;
-    // transform: rotateX(0deg);
   }
   .btn-close-menu {
     display: none;
@@ -194,7 +185,6 @@
     padding: initial;
     margin-left: 93px;
     flex-grow: 1;
-    // transform: rotateX(0deg);
   }
   .header-contakt {
     position: initial;

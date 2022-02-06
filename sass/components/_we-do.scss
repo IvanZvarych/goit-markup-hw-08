@@ -8,10 +8,6 @@
     display: block;
   }
 
-  .header-2 {
-    @include font-design(Roboto, normal, 700, 36px, 1.16, 0.03em);
-    text-align: center;
-  }
   .we-do {
     display: flex;
     justify-content: center;

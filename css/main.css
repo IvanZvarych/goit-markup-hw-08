@@ -1323,15 +1323,6 @@ ul {
   .section--we-do {
     display: block;
   }
-  .header-2 {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    letter-spacing: 0.03em;
-    text-align: center;
-  }
   .we-do {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1486,6 +1477,7 @@ ul {
     line-height: 1.16;
     letter-spacing: 0.03em;
     text-align: center;
+    margin-bottom: 50px;
   }
 }
 
@@ -1819,9 +1811,7 @@ ul {
           transition-timing-function: var(--transition-cub);
 }
 
-.btn:hover,
-.btn :active,
-.btn :focus {
+.btn:hover, .btn:active, .btn:focus {
   color: var(--btn-text-color);
   background-color: var(--accent-color);
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
