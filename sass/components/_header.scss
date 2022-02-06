@@ -4,6 +4,15 @@
   padding-top: 16px;
   padding-bottom: 16px;
   max-width: 480px;
+
+  //  ===============    TABLET   768    ===========
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    max-width: initial;
+
+    .container--header {
+      width: 480px;
+    }
+  }
 }
 .header--line {
   border-bottom: 1px solid #ececec;
@@ -17,12 +26,17 @@
 .btn-menu-open {
   position: absolute;
   right: 15px;
+  //  ===============    TABLET   768    ===========
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    right: calc(50vw - 225px);
+  }
   top: 10px;
   display: flex;
   border: none;
   padding: 0;
   background-color: transparent;
 }
+
 //  ===============    TABLET   768    ===========
 @media screen and (min-width: 768px) {
   .container--header {
@@ -33,7 +47,6 @@
   }
   .header {
     max-width: initial;
-
     padding-top: 26px;
     padding-bottom: 26px;
   }

@@ -63,6 +63,9 @@
 //  ===============    TABLET   768    ===========
 
 @media screen and (min-width: 768px) {
+  .btn-container {
+    justify-content: center;
+  }
   .btn {
     margin-bottom: 0;
   }
@@ -102,6 +105,9 @@
 //  ===============    DESKTOP   1200    ===========
 
 @media screen and (min-width: 1200px) {
+  .btn-container {
+    justify-content: center;
+  }
   .card-set {
     display: flex;
     flex-wrap: wrap;
@@ -150,9 +156,10 @@
   background-color: rgba(33, 150, 243, 0.9);
   padding: 24px 24px;
   overflow: hidden;
-  overflow-y:auto ;
+  overflow-y: auto;
   @media screen and (min-width: 768px) {
-    padding: 49px 24px;}
+    padding: 49px 24px;
+  }
   @media screen and (min-width: 1200px) {
     overflow-y: hidden;
     padding: 63px 24px;
